@@ -34,12 +34,12 @@ for year in years:
 
 
 
-data = list(zip(team1, team2, winner, margin, ground, date))
+data = list(zip(date,team1, team2, winner, margin, ground))
 
 csv_file_name = "results.csv"
 with open(csv_file_name, mode='w', newline='') as file:
     writer = csv.writer(file)
 
-    writer.writerow(["team1", "team2", "winner", "margin", "ground", "date"])
+    writer.writerow(["date", "Team_1","Team_2", "Winner", "Margin", "Ground"])
 
     writer.writerows(data)
